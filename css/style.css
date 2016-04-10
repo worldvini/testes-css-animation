@@ -1,0 +1,42 @@
+ 
+.coracao {
+  width: 100px;
+  height: 100px;
+  background: #4fc3ff;
+  position: relative;
+  transform: rotate(-135deg);
+  margin: 50px;
+  animation: pulsar 3s infinite linear;
+}
+
+.coracao::before {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  background: #4fc3ff;
+  position: absolute;
+  top: 50px;
+  content: "";
+}
+
+.coracao::after {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  background: #4fc3ff;
+  position: absolute;
+  left: 50px;
+  content: "";
+}
+
+@keyframes pulsar {
+	0% {transform: scale(.9) rotate(-135deg);}
+	100% {transform: scale(1.2) rotate(-135deg);}
+}
+
+@media only screen and (max-width: 400px) {
+	body {
+		background-color: blue;
+	}
+
+}
